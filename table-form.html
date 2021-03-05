@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Sử dụng các thẻ Input</h1>
+<form>
+    <!-- thẻ tên trường dữ liệu  , type="password" là ẩn nội dung-->
+    User Name <br/>
+     <input type="Text" Name="UseName"><br>
+    Password : <br/>
+    <input type="Password"  name="Password"><br>
+
+    <!--nhấn để mở là submit-->
+
+    <input type="submit" value="submit"<br>
+    <input type="reset"><br/><br/>
+
+    <!-- thẻ radio là lựa chọn 1 trong nhiều giá trị ,value là thẻ giá trị -->
+    <h2> Lựa chọn 1 trong 3</h2>
+
+    <input type="radio" name="gender" value="male" checked>  Male<br>
+    <input type="radio"name="gender" value="female"checked>  Female<br>
+    <input type="radio"name="gender"value="other" checked>   Other<br/><br>
+    <h2>Bike or car</h2><br>
+    <!-- thẻ checkbox giúp ta lựa chong 1 hoặc nhiều giá trị-->
+
+    <input type="checkbox"name="gender"value="other" checbox>   car<br/>
+    <input type="Checkbox"name="gender"value="other" checked>   bike<br/><br/>
+    <!-- thẻ type=button được sử dụng để tạo 1 nút , gán với sự kiện của javascrip -->
+    <input type="button" onclick="alert('Hello World)" value="click Me"> <br/><br>
+
+
+
+</form>
+
+<h1> Post and Get</h1>
+        <!-- method quy định cách thức dữ liệu gửi lên server là "get" or post
+             action chỉ ra địa chỉ url gửi lên sever     -->
+<form action="/action_page" method="get">
+    <label for="Fname">First Name :</label><br>
+    <input type="text" id="fname" name="fname"> <br><br/>
+    <label for="lname">Last Name :</label><br>
+    <input type="text" id="lname" name="lname"><br/><br/>
+    <input type="submit" value="Submit"> <br/><br/>
+
+</form>
+
+
+</body>
+</html>
