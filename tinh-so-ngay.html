@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="nhapsothang">
+    <button onclick="tinhsongay()">Tính số ngày</button>
+
+
+
+    <script>
+    function tinhsongay() {
+        let sothang = +document.getElementById('nhapsothang').value;
+
+        switch (sothang){
+            case 1 :
+            case 3 :
+            case 5  :
+            case 7 :
+            case 8  :
+            case 10  :
+            case 12   :
+                  alert("Tháng " +sothang+" có 31 ngày" );
+                break;
+           case 2 :
+                alert("Tháng 2 có 28 ngày")
+                break;
+           default :
+               alert("tháng " +sothang+ " có 30 ngày")
+        }
+    }
+
+
+    </script>
+</body>
+</html>
