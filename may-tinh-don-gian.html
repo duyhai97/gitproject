@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      table {
+            text-align: center;
+        }
+      td {
+          width: 30px;
+          height: 30px;
+      }
+    </style>
+</head>
+<body>
+<table border="1">
+  <tr>
+    <th colspan="4"> <input type="text" id="display"></th>
+  </tr>
+  <tr>
+      <td><button type="button" onclick="click1('1')">1</button></td>
+      <td><button type="button" onclick="click1('2')">2</button></td>
+      <td><button type="button" onclick="click1('3')">3</button></td>
+      <td><button type="button" onclick="click1('+')">+</button></td>
+  </tr>
+
+  <tr>
+   <td><button type="button" onclick="click1('4')">4</button></td>
+   <td><button type="button" onclick="click1('5')">5</button></td>
+   <td><button type="button" onclick="click1('6')">6</button></td>
+   <td><button type="button" onclick="click1('-')">-</button></td>
+  </tr>
+
+  <tr>
+      <td><button type="button" onclick="click1('7')">7</button></td>
+      <td><button type="button" onclick="click1('8')">8</button></td>
+      <td><button type="button" onclick="click1('9')">9</button></td>
+      <td><button type="button" onclick="click1('*')">x</button></td>
+  </tr>
+
+  <tr>
+      <td><button type="button" onclick="click1('c')">C</button></td>
+      <td><button type="button" onclick="click1('0')">0</button></td>
+      <td><button type="button" onclick="click1('=')">=</button></td>
+      <td><button type="button" onclick="click1('/')">/</button></td>
+  </tr>
+
+</table>
+<script>
+    function deletel() {
+        display.value = '';
+    }
+
+    function hienthibieuthuc(kytu) {
+        display.value += kytu;
+    }
+
+    function hienthiketqua() {
+        let result = eval(document.getElementById("display").value);
+        display.value = result;
+    }
+    function click1(kytu){
+        switch (kytu) {
+            case 'c':
+                deletel();
+                break;
+            case '=':
+                hienthiketqua();
+                break;
+            default:
+                hienthibieuthuc(kytu);
+        }
+    }
+</script>
+
+</body>
+</html>
