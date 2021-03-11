@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+    <img id="nobita" src="https://james.codegym.vn/pluginfile.php/27447/mod_assign/intro/1.png" style="position:absolute;left:0; top:0;" height="200" width="160"/>
+
+    <script>
+        function dichuyenlen() {
+            let element = document.getElementById("nobita");
+            element.style.top = parseInt(element.style.top) - 10 + 'px';
+        }
+        function dichuyenxuong() {
+            var element = document.getElementById("nobita");
+            element.style.top = parseInt(element.style.top) + 10 + 'px';
+        }
+        function dichuyensangtrai() {
+            var element = document.getElementById("nobita");
+            element.style.left = parseInt(element.style.left) - 10 + 'px';
+        }
+        function dichuyensangphai() {
+            var element = document.getElementById("nobita");
+            element.style.left = parseInt(element.style.left) + 10 + 'px';
+
+        }
+        function luachondichuyen(evt) {
+            console.log(evt.keyCode);
+            switch (evt.keyCode) {
+                case 37:
+                    dichuyensangtrai();
+                    break;
+                case 39:
+                    dichuyensangphai();
+                    break;
+                case 38 :
+                    dichuyenlen();
+                    break;
+                case 40 :
+                    dichuyenxuong();
+                    break ;
+
+
+
+
+            }
+
+        }
+        function docReady() {
+            window.addEventListener('keydown', luachondichuyen);
+        }
+
+    </script>
+
+
+</body>
+</html>
