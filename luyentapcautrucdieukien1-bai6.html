@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    let aa = +prompt('Tổng doanh số bán hàng ');
+    let hoahong =null
+     if(aa< 5000000 && aa>0) {
+         hoahong = 5 / 100 * aa;
+         alert('Hoa hồng nhận được là : ' + hoahong +'VND');
+     }
+     else if(aa<10000000){
+            hoahong = 10/100*aa ;
+            alert('Hoa hồng nhận được là : ' + hoahong + 'VND');
+     }
+          else if(aa<20000000) {
+         hoahong = 18 / 100 * aa;
+         alert('Hoa hồng nhận được là : ' + hoahong + 'VND');
+     }
+               else {
+                   hoahong = 25/100*aa;
+                   alert('Hoa hồng nhận được là : ' + hoahong + 'VND');
+     }
+
+
+</script>
+</body>
+</html>

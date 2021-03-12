@@ -5,23 +5,114 @@
     <title></title>
 </head>
 <body>
-
     <input id="AA" type="text">
     <input id="BB" type="text"><br/><br/>
 
-    <button id="add" type="button" onclick= "ketqua('cong')">addition(+)</button>
-    <button id="sub" type="button" onclick="ketqua('tru')">subtraction(-)</button>
-    <button id="mul" type="button" onclick="ketqua('nhan')">multiplication(X)</button>
-    <button id="div" type="button" onclick="ketqua('chia')">division(/)</button><br><br>
 
-    <button id="result"  onclick="ketqua()" >result</button>
-
-
+    <button  type="button" onclick= "ketqua('cong')">addition(+)</button>
+    <button  type="button" onclick="ketqua('tru')">subtraction(-)</button>
+    <button  type="button" onclick="ketqua('nhan')">multiplication(X)</button>
+    <button  type="button" onclick="ketqua('chia')">division(/)</button><br><br>
+   <div id="tinh"></div>
 
 
+<script>
+    function ketqua(type) {
+        let sothunhat = +document.getElementById('AA').value;
+        let sothuhai = +document.getElementById('BB').value;
+        let convert;
 
-<script src="ung-dung-may-tinh.js">
+        if (type === 'cong') {
+            convert = sothunhat + sothuhai;
+        } else if (type === 'tru') {
+            convert =sothunhat -sothuhai;
+        } else if (type === 'nhan') {
+            convert = sothunhat * sothuhai;
+
+        } else {
+            convert = sothunhat / sothuhai;
+        }
+
+        document.getElementById('tinh').innerHTML = 'kết quả: ' + convert;}
 
 </script>
+
+
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<!--    <button  type="button" onclick= "ketqua('cong')">addition(+)</button>-->
+<!--    <button  type="button" onclick="ketqua('tru')">subtraction(-)</button>-->
+<!--    <button  type="button" onclick="ketqua('nhan')">multiplication(X)</button>-->
+<!--    <button  type="button" onclick="ketqua('chia')">division(/)</button><br><br>-->
+
+
+<!--<script>-->
+<!--    function ketqua(type) {-->
+<!--        let sothunhat = +document.getElementById('AA').value;-->
+<!--        let sothuhai = +document.getElementById('BB').value;-->
+<!--        let convert;-->
+
+<!--        if (type === 'cong') {-->
+<!--            convert = sothunhat + sothuhai;-->
+<!--        } else if (type === 'tru') {-->
+<!--            convert =sothunhat -sothuhai;-->
+<!--        } else if (type === 'nhan') {-->
+<!--            convert = sothunhat * sothuhai;-->
+
+<!--        } else {-->
+<!--            convert = sothunhat / sothuhai;-->
+<!--        }-->
+
+<!--        document.getElementById('result').innerHTML = 'Result: ' + convert;-->
+
+<!--    }-->
+
+<!--</script>-->
+
+<!--    <input id="sothu1" type="text">-->
+<!--    <input id="sothu2" type="text"><br/><br/>-->
+
+<!--    <select id="tinh">-->
+<!--        <option value="+" >addition(+)</option>-->
+<!--        <option value="-" >subtraction(-)</option>-->
+<!--        <option value="*" >multiplication(X)</option>-->
+<!--        <option value="/" >division(/)</option>-->
+
+<!--    </select>-->
+
+<!--    <button type="button" onclick="tinhtoan()" >Tính</button> <br/> <br/>-->
+
+<!--    Kết quả :-->
+
+
+<!-- <script>-->
+<!--     function tinhtoan() {-->
+<!--         let sothunhat = +document.getElementById('sothu1').value;-->
+<!--         let sothuhai = +document.getElementById('sothu2').value;-->
+<!--         let operator = document.getElementById('tinh').value;-->
+<!--         let result;-->
+
+<!--         eval(sothunhat + operator + sothuhai);-->
+<!--     }-->
+<!--     //    if (operator== '+'){-->
+<!--     //        result =sothunhat + sothuhai ;-->
+<!--     //    }-->
+<!--     //-->
+<!--     //-->
+<!--     //    document.getElementById('result').innerText = result ;-->
+<!--     //-->
+
+
+<!-- </script>-->

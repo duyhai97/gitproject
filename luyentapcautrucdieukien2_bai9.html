@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra 3 số thực có phải cạnh của 1 tam giác</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhập số a , (a>0) : ');
+    let b = +prompt('nhập số b , (b>0) : ');
+    let c = +prompt('nhập số c , (c>0) : ');
+
+    if((a+b)>c && (b+c)>a && (a+c)>b ){
+        document.write(a + ' , ' + b + ' , ' + c + '   Là 3 cạnh của 1 tam giác');
+    }
+    else {
+        document.write(a + ' , ' + b + ' , ' + c +  '  không phải 3 cạnh của 1 tam giác' )
+    }
+</script>
+</body>
+</html>

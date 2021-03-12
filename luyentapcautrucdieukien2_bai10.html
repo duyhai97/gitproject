@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+    <div>Nhập số lương theo tháng của bạn (đơn vị : triệu đồng)</div><br/>
+    <input type=" text" id="nhapsoluong" >
+   <button  onclick="tinhthue()" >Tính</button><br/>
+    <div id="aaa"></div>
+    <script>
+        function tinhthue () {
+            let aa = +document.getElementById("nhapsoluong").value;
+            let thue;
+
+            if (aa <= 5) {
+                thue = 5 / 100 * aa;
+            } else if (aa > 5 && aa <= 10) {
+                thue = 10 / 100 * aa;
+            } else if (aa > 10 && aa <= 18) {
+                thue = 15 / 100 * aa;
+            } else if (aa > 18 && aa <= 32) {
+                thue = 20 / 100 * aa;
+            } else if (aa > 32 && aa <= 52) {
+                thue = 25 / 100 * aa;
+            } else if (aa > 52 && aa <= 80) {
+                thue = 30 / 100 * aa;
+            } else {
+                thue = 35 / 100 * aa;
+            }
+
+
+            document.getElementById("aaa").innerHTML = 'Tổng thuế phải nộp là : ' + thue + '  Triệu đồng';
+        }
+    </script>
+</body>
+</html>
